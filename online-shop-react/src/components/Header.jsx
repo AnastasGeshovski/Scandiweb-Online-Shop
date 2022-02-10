@@ -30,7 +30,6 @@ const Header = () => {
         <h1><BagLogo/></h1>
         <ul className="ul_cart">
 
-        {/* <li><Currency/></li> */}
         {/* Dropdown and select currency */}
         <li className="dropdown-currency">
         <div className="dropbtn" onClick = {(e) => 
@@ -48,7 +47,6 @@ const Header = () => {
         <div className="drop-cart-btn" onClick = {(e) => 
         setCounterIsActive(!counterisActive)}><ShopingCart/></div>
            {counterisActive && (
-    
              <Counter/>
             )}
            </li>

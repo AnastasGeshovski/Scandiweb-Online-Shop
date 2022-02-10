@@ -3,20 +3,6 @@ import "./SingleProduct.scss";
 import AddToCart from "../assets/AddToCart"
 
 class SingleProduct extends Component {
-    // constructor(props) {
-    //   super(props);
-  
-    //   this.state = {
-    //     priceAmount: this.props.product.prices,
-    //     priceSymbol: this.props.price.currency.symbol[0],
-    //   };
-
-    //   this.setState({price: this.state.priceAmount})
-    // }
-
-    
-
-    
 
       render(){
           console.log("IN SINGLE PRODUCT", this.props)
@@ -28,9 +14,7 @@ class SingleProduct extends Component {
             <AddToCart className="add-to-cart-image"/>
             
             <h2>{this.props.product.name}</h2>
-            <h3>Product price: {this.props.product.prices.map( price => {
-                // console.log(price.amount);
-                // console.log(price.currency.symbol[0]) 
+            <h3>{this.props.product.prices.map( price => {
                  return (<div key={this.props.product.id}>
                         {price.amount} {price.currency.symbol[0]}</div>)
             })}</h3>
